@@ -1,11 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="UDA mark: a U with three lashes, like a closed eye">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" width="440" height="200" role="img" aria-label="UDA wordmark: a U with three lashes like a closed eye, followed by D and A">
   <title>UDA</title>
   <g fill="none" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
-    <!-- the U / closed lid -->
+    <!-- U / closed lid -->
     <path d="M50 55 V100 A50 50 0 0 0 150 100 V55" stroke-width="18"/>
     <!-- lashes: two at 45 degrees, one straight down -->
     <line x1="56.2" y1="143.8" x2="39.9" y2="160.1" stroke-width="14"/>
     <line x1="143.8" y1="143.8" x2="160.1" y2="160.1" stroke-width="14"/>
     <line x1="100" y1="162" x2="100" y2="185" stroke-width="14"/>
+    <!-- D -->
+    <path d="M200 55 V150 M200 55 H230 A47.5 47.5 0 0 1 230 150 H200" stroke-width="18"/>
+    <!-- A -->
+    <path d="M313 150 L358 55 L403 150 M330 115 H386" stroke-width="18"/>
   </g>
 </svg>
