@@ -48,6 +48,15 @@ Rails are the payment paths the card can move money on. Title-only means a rail 
 - **Not a score promise.** UDA reports activity accurately. What a bureau does with accurate data is the bureau's business.
 - **Not an earnest-money or deal-funding product.** Nothing here funds deposits, EMDs, or closings.
 
+## Partnerships (exploratory)
+
+Nothing in this section is signed. These are directions the team is looking at, not agreements.
+
+- **LifeLock.** Possible identity-protection layer for cardholders and seated people.
+- **Sub2 / Gator community.** Possible distribution and education partner for operators already active in creative-finance deals.
+
+If a partnership closes, it moves out of this section and into the product definition above. Until then, treat it as open.
+
 ## Repository
 
 This repository holds the UDA card codebase and is written in TypeScript. Structure, setup, and contribution notes will be added as the code lands.
