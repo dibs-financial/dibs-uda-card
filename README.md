@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img src="assets/logo.svg" width="120" height="120" alt="UDA mark: a U with three lashes, like a closed eye">
+  </picture>
+</p>
+
 # dibs-uda-card
 
 UDA — It's the buzinazz. One card, two files. Consumer + business credit OS: People seats, Operating sleeve, title-only rails. Not a mill. Not a lender.
@@ -63,7 +70,10 @@ This repository holds the UDA card codebase and is written in TypeScript. Struct
 
 ```
 dibs-uda-card/
-└── README.md
+├── README.md
+└── assets/
+    ├── logo.svg
+    └── logo-dark.svg
 ```
 
 ## Status
