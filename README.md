@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
-    <img src="assets/logo.svg" width="264" height="120" alt="UDA wordmark: a U with three lashes like a closed eye, followed by D and A">
+    <img src="assets/logo.svg" width="282" height="120" alt="UDA wordmark: a U with three gold lashes like a closed eye, followed by D and A">
   </picture>
 </p>
 
