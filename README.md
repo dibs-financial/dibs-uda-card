@@ -5,77 +5,135 @@
   </picture>
 </p>
 
-# dibs-uda-card
+# UDA
 
-UDA — It's the buzinazz. One card, two files. Consumer + business credit OS: People seats, Operating sleeve, title-only rails. Not a mill. Not a lender.
+**The only Tool You Need when building credit**
 
-[![uda](https://img.shields.io/badge/topic-uda-1f6feb)](https://github.com/topics/uda)
-[![fintech](https://img.shields.io/badge/topic-fintech-1f6feb)](https://github.com/topics/fintech)
-[![business-credit](https://img.shields.io/badge/topic-business--credit-1f6feb)](https://github.com/topics/business-credit)
-[![consumer-credit](https://img.shields.io/badge/topic-consumer--credit-1f6feb)](https://github.com/topics/consumer-credit)
-[![card](https://img.shields.io/badge/topic-card-1f6feb)](https://github.com/topics/card)
-[![typescript](https://img.shields.io/badge/topic-typescript-1f6feb)](https://github.com/topics/typescript)
+One card. One personal file.
 
----
+UDA is the consumer company. Personal card. Personal book. Household seats only.
 
-## What UDA is
-
-UDA is a credit operating system that runs one card across two credit files: the owner's consumer file and the business's file. The card is the front door. The two files are the ledger of record behind it.
-
-The product is built for small operators who already run a business and want one thing that keeps personal and business credit activity separate, reported correctly, and readable at a glance.
-
-## One card, two files
-
-| | Consumer file | Business file |
-|---|---|---|
-| **Who** | The owner and the people they seat | The operating entity |
-| **What flows here** | Personal seats, personal spend | Operating sleeve, vendor spend |
-| **Reported as** | Consumer tradeline | Business tradeline |
-
-Every transaction lands in exactly one file. Nothing is double-counted and nothing is blended.
-
-## The three parts
-
-### People seats
-
-A seat is a named person on the card. Each seat carries its own limit, its own controls, and its own spend history. Seats are how a household or a small team shares one card without sharing one undifferentiated balance.
-
-### Operating sleeve
-
-The sleeve is the business's spend envelope. It is sized separately from the seats, settles against the business file, and is where recurring operating spend lives: software, inventory, vendors, subscriptions.
-
-### Title-only rails
-
-Rails are the payment paths the card can move money on. Title-only means a rail is opened in the name of the entity that holds title to the account, and only that entity. No borrowed names, no piggyback authorized-user tricks, no rented tradelines.
-
-## What UDA is not
-
-- **Not a mill.** UDA does not manufacture, rent, or sell tradelines, and it does not run a "method" for gaming a score.
-- **Not a lender.** UDA does not extend credit or underwrite. Credit is issued by the partner bank on the program; UDA is the operating layer.
-- **Not a score promise.** UDA reports activity accurately. What a bureau does with accurate data is the bureau's business.
-- **Not an earnest-money or deal-funding product.** Nothing here funds deposits, EMDs, or closings.
-
-## Partnerships (exploratory)
-
-Nothing in this section is signed. These are directions the team is looking at, not agreements.
-
-- **LifeLock.** Possible identity-protection layer for cardholders and seated people.
-- **Sub2 / Gator community.** Possible distribution and education partner for operators already active in creative-finance deals.
-
-If a partnership closes, it moves out of this section and into the product definition above. Until then, treat it as open.
-
-## Repository
-
-This repository holds the UDA card codebase and is written in TypeScript. Structure, setup, and contribution notes will be added as the code lands.
+UDA Business is a different company. It is not this repo.
 
 ```
-dibs-uda-card/
-├── README.md
-└── assets/
-    ├── logo.svg
-    └── logo-dark.svg
+Household AUs sit on the founder's personal UDA.
+Nobody's personal file moves unless they flip a toggle and agree.
 ```
 
-## Status
+v0 is the consumer rules engine and a local HTTP API. It does not issue cards, move bank money, or report to bureaus.
 
-Early. The product definition above is current as of this README. Anything not written here should be treated as open, not decided.
+## What $25/mo buys
+
+$25 per month or $249 per year.
+
+- One personal revolving book, three bureaus when the bank is live
+- Watcher composes utilization on that book
+- Household AU on this card
+- The Book, The Hook, The File
+- Watch hooked cards
+- Shield on the first three hooked cards
+- Burnable virtual number
+- We do not sell your data
+
+Chime is free if they get the paycheck. Extra is $20–25 for two bureaus. UDA is $25 for the book, the shield, and the watch.
+
+## Four rooms
+
+| Room | Job |
+| --- | --- |
+| The Book | Utilization on UDA and every hooked card |
+| The Hook | Attach / detach. Shield on or off per card |
+| The File | Soft credit report the member agreed to |
+| Watcher | Congratulates the band. Nudges when you leave it |
+
+Green 1–9%. Amber 10–29%. Red 30%+. Next statement date in plain English: "Photograph in 4 days."
+
+## Shield
+
+When another card is hooked to UDA, the store sees a UDA number. Not their card.
+
+That is a shield. It is not invisibility.
+
+- Watch is included
+- Shield is included on three cards
+- Fourth hooked card is +$3
+- The attached issuer can still see a charge from UDA
+- The network still sees a token
+
+## Watcher
+
+Short. Specific. No score promises.
+
+> Nice. UDA is at 6%. That's the photograph we want.
+
+> UDA jumped to 34% after the tire shop. Pay $220 before Friday and the picture goes back to 7%.
+
+Praise is rare. Correction is a number and a date.
+
+## Policy
+
+- We do not sell personal information
+- We do not sell spend graphs
+- LifeLock is a partner we are asking for — not a live embed until paper is signed
+- No fee when a score moves
+- No rented authorized-user seats
+
+UDA does not promise a score. Results vary.
+
+## Product rules
+
+- Personal book only
+- Household AU: spouse, partner, or adult child
+- No Operator seats
+- No Team tokens
+- No EIN
+- No company file
+
+## Plans
+
+| | Starter | Build | Firm |
+| --- | --- | --- | --- |
+| Price | $25/mo | $25/mo | $25/mo |
+| Household | 2 | 4 | 4 |
+| Hooked cards with shield | 3 | 3 | 3 |
+
+## Run
+
+```bash
+npm install
+npm test
+npm start
+```
+
+API: `http://localhost:8787`
+
+```bash
+curl -s -X POST localhost:8787/entities \
+  -H 'content-type: application/json' \
+  -d '{"kind":"consumer","legalName":"Alex Rivera","ssnLast4":"0000"}'
+```
+
+## What v0 does not do
+
+- Live card issuing
+- Business accounts
+- Shared authorized-user seats
+- Score promises
+- Bank wires
+- LifeLock API
+
+Those wait on a sponsor bank and signed partners.
+
+## GitHub
+
+Repo: `dibs-financial/dibs-uda-card`
+
+About:
+
+```
+UDA. The only tool you need when building credit.
+```
+
+## License
+
+UNLICENSED. Private.
