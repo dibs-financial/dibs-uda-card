@@ -7,7 +7,7 @@
 
 # UDA
 
-**The only Tool You Need when building credit**
+**U DA’ Only Card I Need**
 
 One card. One personal file.
 
@@ -131,8 +131,16 @@ Repo: `dibs-financial/dibs-uda-card`
 About:
 
 ```
-UDA. The only tool you need when building credit.
+UDA. U DA’ Only Card I Need.
 ```
+
+Cleaner About if GitHub feels tight:
+
+```
+UDA. The only card I need.
+```
+
+The slogan is marketing only. Not a score promise. It stays off KYC, the agreement, and bureau copy.
 
 ## License
 
