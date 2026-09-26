@@ -20,7 +20,7 @@ Household AUs sit on the founder's personal UDA.
 Nobody's personal file moves unless they flip a toggle and agree.
 ```
 
-v0 is the consumer rules engine and a local HTTP API. It does not issue cards, move bank money, or report to bureaus.
+v0 runs on the LINE rules engine. It does not issue cards, move bank money, or report to bureaus.
 
 ## What $25/mo buys
 
@@ -97,21 +97,11 @@ UDA does not promise a score. Results vary.
 | Household | 2 | 4 | 4 |
 | Hooked cards with shield | 3 | 3 | 3 |
 
-## Run
+## LINE
 
-```bash
-npm install
-npm test
-npm start
-```
+The rules live in LINE: `dibs-financial/dibs-line`. Spec: `UDA_LINE.md` there.
 
-API: `http://localhost:8787`
-
-```bash
-curl -s -X POST localhost:8787/entities \
-  -H 'content-type: application/json' \
-  -d '{"kind":"consumer","legalName":"Alex Rivera","ssnLast4":"0000"}'
-```
+This repo holds no rules code. LINE runs this company as `kind: "consumer"` and refuses to bridge it to a business book.
 
 ## What v0 does not do
 
